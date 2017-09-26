@@ -1,4 +1,3 @@
-
 $('document').ready(function(){
 var numbers = [0,1,2,3,4,5,6,7,8,9];
 
@@ -57,6 +56,7 @@ $('#numero').keyup(function(e){
 
     if($(this).val().length==4)
     {
+      $("p").css("color","black");
       if($(this).val()==num)
     {
       
@@ -106,6 +106,10 @@ var repetir = 1;
         $('tbody').append('<tr><td>' + $(this).val() + '</td><td>' + picas + '</td><td>' + fijas + '</td></tr>');
      $(this).val('').focus();
       }
+      else if (encontrado==true){
+
+        $("p").css({"color":"#FF0000"});
+      }
 
        
         }
@@ -115,17 +119,18 @@ var repetir = 1;
     else {
 
       $("p").css("color","#FF0000");
-      $('input').css({"color":"#CD0000", "background-color":"#FA8072"});
+      
      
     }
 
    
 }
-if(e.which=="8" || $(this).val().length==4)
+if(e.which=="8")
     {
       $("p").css("color","black");
-       $('input').css({"color":"black", "background-color":"white"});
+       
     }
 });
 });
+
 
